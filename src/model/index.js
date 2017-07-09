@@ -1,4 +1,5 @@
 'use strict';
+require('../assets/test.scss');
 
 const Calculator = function() {
   this.valA = 0;
