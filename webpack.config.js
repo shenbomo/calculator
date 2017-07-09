@@ -1,8 +1,8 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 
-const extractCSS = new ExtractTextPlugin('./style/[name].css');
-const extractSASS = new ExtractTextPlugin('./style/[name].css');
+const extractCSS = new ExtractTextPlugin('[name].css');
+const extractSASS = new ExtractTextPlugin('[name].css');
 
 module.exports = {
   context: path.join(__dirname, '/src/model'),
@@ -13,7 +13,7 @@ module.exports = {
 
   output: {
     path: path.join(__dirname + '/public'),
-    filename: './js/[name].bundle.js',    
+    filename: '[name].bundle.js',    
   },
 
   module: {
