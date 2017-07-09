@@ -8,7 +8,7 @@ module.exports = {
   context: path.join(__dirname, '/src/model'),
   entry: { 
     calculator: './index.js',
-    test: "./index.test.js"
+    test: "./test/index.test.js"
   },
 
   output: {
