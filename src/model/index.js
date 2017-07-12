@@ -1,5 +1,5 @@
 'use strict';
-require('../assets/main.scss');
+//require('../assets/main.scss'); need to fix jest to handle assets first
 
 const Calculator = function() {
   this.valA = 0;
