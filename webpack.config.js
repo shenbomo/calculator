@@ -6,7 +6,7 @@ module.exports = {
   context: path.join(__dirname, '/src/model'),
   entry: { 
     calculator: './index.js',
-    test: "./test/index.test.js"
+    test: "./index.test.js"
   },
 
   output: {
@@ -18,11 +18,11 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: extractCSS.extract([ 'css-loader', ]) //'postcss-loader'
-        // use: [
-        //   { loader: 'style-loader' },
-        //   { loader: 'css-loader' }
-        // ]
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' }
+          //{ loader: 'postcss-loader' }
+        ]
       },
       {
         test: /\.scss$/,
