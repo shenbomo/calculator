@@ -1,4 +1,5 @@
 'use strict';
+
 const Calculator = function() {
   this.valA = 0;
   this.valB = 0;

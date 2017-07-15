@@ -5,8 +5,7 @@ const extractSASS = new ExtractTextPlugin('[name].css');
 module.exports = {
   context: path.join(__dirname, '/src/model'),
   entry: { 
-    calculator: './index.js',
-    //test: "./index.test.js"
+    calculator: './index.js'
   },
 
   output: {
@@ -26,15 +25,11 @@ module.exports = {
       },
       {
         test: /\.scss$/,
+        // use: defaultSassLoader,
         use: extractSASS.extract({
           fallback: 'style-loader',
           use: ['css-loader', 'sass-loader']
         })
-        // use: [
-        //   { loader: 'style-loader' },
-        //   { loader: 'css-loader' },
-        //   { loader: 'sass-loader' }
-        // ]
       },
       {
         test: /\.jsx?$/,
