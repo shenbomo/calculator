@@ -10,14 +10,13 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname + '/public'),
-    filename: '[name].bundle.js',
-    publicPath: 'http://localhost:8080/public/'
+    filename: '[name].bundle.js'
   },
   devServer: {
     hot: true,
     inline: true,
     contentBase: ['./src'],
-    publicPath: 'http://localhost:8080/public/'
+    publicPath: 'http://localhost:8080/'
   },
   module: {
     rules: [

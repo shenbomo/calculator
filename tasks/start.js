@@ -17,6 +17,6 @@ gulp.task('start', 'Start hot reload server via nodemon.', function() {
     env: {'NODE_ENV': 'development'},
   }).on('start', function() {
     console.log(green(`Kicking off webpack...` ));
-    execSync('webpack');
+    execSync('webpack --watch');
   });
 });
